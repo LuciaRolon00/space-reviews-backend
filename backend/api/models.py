@@ -3,6 +3,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Juego(models.Model):
     titulo = models.CharField(max_length=100)
+    genero = models.CharField(max_length=50, blank=True, null=True) 
+    plataforma = models.CharField(max_length=100, blank=True, null=True)
+    desarrollador = models.CharField(max_length=100, blank=True, null=True)
     descripcion = models.TextField(blank=True, null=True)
     imagen = models.URLField(max_length=255, blank=True, null=True)
     estrellas = models.IntegerField(
